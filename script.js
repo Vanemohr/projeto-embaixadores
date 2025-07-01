@@ -1,5 +1,5 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaPerguntas = document.querySelector(".caixa-pergunta");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
@@ -20,6 +20,7 @@ const perguntas = [
             "Um desafio, que pode gerar desigualdade no acesso à tecnologia e desviar o foco da interação humana."
         ]
     },
+
      {
         enunciado: "Pensando no papel do professor, como a IA pode impactar sua atuação?",
         alternativas: [
@@ -27,6 +28,7 @@ const perguntas = [
             "A IA pode desvalorizar o professor, automatizando funções que hoje são essenciais e diminuindo a necessidade de sua intervenção direta."
         ]
     },
+
      {
         enunciado: "Em relação aos estudantes, qual o principal benefício ou risco que você vê na IA?",
         alternativas: [
@@ -34,6 +36,7 @@ const perguntas = [
             "O principal risco é a diminuição do pensamento crítico e da criatividade, além da exposição excessiva a telas."
         ]
     },
+
      {
         enunciado: "A implementação da IA nas escolas deve ser amplamente incentivada ou tratada com cautela e restrições?",
         alternativas: [
@@ -46,6 +49,10 @@ const perguntas = [
 let atual = 0;
 let perguntaAtual;
 function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
 }
