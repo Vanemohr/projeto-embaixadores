@@ -51,7 +51,7 @@ let atual = 0;
 let perguntaAtual;
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
-    console.log(perguntaAtual.enunciado);
+    console.log(caixaPerguntas);
     caixaPerguntas.textContent = perguntaAtual.enunciado;
 }
 
