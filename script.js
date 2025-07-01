@@ -52,7 +52,7 @@ let perguntaAtual;
 function mostraPergunta() {
     perguntaAtual = perguntas[atual];
     console.log(perguntaAtual.enunciado);
-    // caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
 }
 
 mostraPergunta();
